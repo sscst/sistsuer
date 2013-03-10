@@ -1,0 +1,13 @@
+#!/usr/bin/env python  
+# -*- coding: utf-8 -*- 
+import urllib,urllib2
+
+url = "http://api.simsimi.com/request.p"
+with open('key.json') as f:
+    evn = f.read()
+para={"key":evn["key"],
+      "text":u"你好",
+      "lc":"ch"
+}
+response = urllib2.urlopen(url+'?'+urllib.urlencode(para))
+print response.read()

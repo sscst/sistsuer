@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-  
+#!/usr/bin/env python
+
+import smtplib
+from email.mime.text import MIMEText
+from email.Header import Header
+from email.MIMEText import MIMEText
+from email.MIMEMultipart import MIMEMultipart
+import smtplib, datetime
+
+def send_mail(to_list,sub,content):
+    mail_host="smtp.sina.com"
+    mail_user="470840005qq"
+    mail_pass="19920820"
+    mail_postfix="sina.com"
+    me=mail_user+"<"+mail_user+"@"+mail_postfix+">"
+
+    msg = MIMEText(content)
+    msg.replace_header('Content-Transfer-Encoding', 'quoted-printable')
+    msg['Subject'] = sub
+    msg['From'] = me
+    msg['To'] = to_list
+    try:
+        s = smtplib.SMTP()
+        s.connect(mail_host)
+        s.login(mail_user,mail_pass)
+        s.sendmail(me, to_list, msg.as_string())
+        s.close()
+        return True
+    except Exception, e:
+        return False
+

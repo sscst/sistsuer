@@ -1,0 +1,11 @@
+#!/usr/bin/env python  
+# -*- coding: utf-8 -*- 
+
+import MySQLdb,time
+from app.gmail import *
+
+while True :
+    num = 1
+    send_mail("470840005@qq.com","test%d" % num,'测试时间abc')
+    num += 1
+    time.sleep(60*5)

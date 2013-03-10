@@ -1,0 +1,12 @@
+www:
+  type: python
+  smtp_server: sysugril-sscst.azva.dotcloud.net
+  smtp_port: 51005
+  smtp_username: dotcloud
+  smtp_password: HT88f6bWgEOyIIOU6DJf
+db:
+  type: mysql
+mailer:
+  type: smtp
+worker:
+  type: python-worker
