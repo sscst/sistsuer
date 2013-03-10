@@ -1,2 +1,0 @@
-[program:timer]
-command = python /home/dotcloud/current/time/timetest.py
