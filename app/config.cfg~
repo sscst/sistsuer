@@ -1,6 +1,0 @@
-SECRET_KEY = '\xfb\x12\xdf\xa1@i\xd6>V\xc0\xbb\x8fp\x16#Z\x0b\x81\xeb\x16'
-DEBUG = True
-CACHE_TYPE = 'redis'
-CACHE_REDIS_HOST = 'wxtablegames-sscst.azva.dotcloud.net'
-CACHE_REDIS_PORT = 49904
-CACHE_REDIS_PASSWORD = 'TKojNrs9U1PLxcJ3YGca'
